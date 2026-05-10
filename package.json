@@ -8,8 +8,7 @@
   },
   "files": [
     "pi-sync.ts",
-    "sync.sh",
-    "SKILL.md"
+    "sync.sh"
   ],
   "keywords": [
     "pi",
@@ -29,9 +28,6 @@
   "pi": {
     "extensions": [
       "pi-sync.ts"
-    ],
-    "skills": [
-      "SKILL.md"
     ]
   }
 }
