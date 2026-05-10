@@ -29,7 +29,7 @@ curl -fsSL https://github.com/cemmetje87/pi-sync/raw/main/install.sh | bash
 
 > **Note:** First export auto-generates a random encryption password (shown in output). Save this for importing on other machines.
 
-### NPM (Once Published)
+### NPM
 
 ```bash
 npm install -g pi-sync-extension
