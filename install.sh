@@ -2,10 +2,10 @@
 set -euo pipefail
 
 # pi-sync One-Liner Installer
-# Usage: curl -fsSL https://git.ozugur.nl/foadmin/pi-sync/raw/branch/main/install.sh | bash
+# Usage: curl -fsSL https://github.com/cemmetje87/pi-sync/raw/main/install.sh | bash
 
 APP="pi-sync"
-REPO_URL="https://git.ozugur.nl/foadmin/pi-sync"
+REPO_URL="https://github.com/cemmetje87/pi-sync"
 INSTALL_DIR="$HOME/.pi/agent/extensions/pi-sync"
 
 MUTED='\033[0;2m'
@@ -20,7 +20,7 @@ usage() {
     cat <<EOF
 pi-sync Installer
 
-Usage: curl -fsSL https://git.ozugur.nl/foadmin/pi-sync/raw/branch/main/install.sh | bash [options]
+Usage: curl -fsSL https://github.com/cemmetje87/pi-sync/raw/main/install.sh | bash [options]
 
 Options:
     -h, --help              Display this help message

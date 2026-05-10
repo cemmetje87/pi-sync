@@ -21,10 +21,10 @@ Securely sync all Pi configuration between machines.
 
 ```bash
 # Install with auto-export
-curl -fsSL https://git.ozugur.nl/foadmin/pi-sync/raw/branch/main/install.sh | bash -s -- --export ~/pi-backup.age
+curl -fsSL https://github.com/cemmetje87/pi-sync/raw/main/install.sh | bash -s -- --export ~/pi-backup.age
 
 # Or just install without export
-curl -fsSL https://git.ozugur.nl/foadmin/pi-sync/raw/branch/main/install.sh | bash
+curl -fsSL https://github.com/cemmetje87/pi-sync/raw/main/install.sh | bash
 ```
 
 > **Note:** First export auto-generates a random encryption password (shown in output). Save this for importing on other machines.
@@ -53,7 +53,7 @@ npm version patch  # or minor/major
 npm publish
 ```
 
-> Requires npm account with @ozugur scope or unique package name.
+> Requires npm account with unique package name.
 
 ### package.json
 
@@ -76,9 +76,9 @@ npm publish
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://git.ozugur.nl/foadmin/pi-sync.git"
+    "url": "https://github.com/cemmetje87/pi-sync.git"
   },
-  "homepage": "https://git.ozugur.nl/foadmin/pi-sync"
+  "homepage": "https://github.com/cemmetje87/pi-sync"
 }
 ```
 
@@ -86,7 +86,7 @@ npm publish
 
 ```bash
 # Clone the repository
-git clone https://git.ozugur.nl/foadmin/pi-sync.git
+git clone https://github.com/cemmetje87/pi-sync.git
 cd pi-sync
 
 # Copy files to Pi extensions directory
@@ -100,7 +100,7 @@ ln -sf ~/.pi/agent/extensions/pi-sync/pi-sync.ts ~/.pi/agent/extensions/pi-sync.
 cd ~/.pi/agent/extensions/pi-sync
 ./sync.sh export ~/pi-backup.age
 
-# Restart Pi to load extension
+# Restart Pi to load the extension
 ```
 
 ### Quick Install (with auto-extension setup)
