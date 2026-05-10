@@ -15,6 +15,34 @@ Securely sync all Pi configuration between machines.
 
 ## 📦 Installation
 
+### NPX (Recommended) 🚀
+
+```bash
+# Install directly from npm (when published) or use npx
+npx pi-sync-extension export ~/pi-backup.age
+```
+
+### From Git (Recommended for now) 
+
+```bash
+# Clone the repository
+git clone https://git.ozugur.nl/foadmin/pi-sync.git
+cd pi-sync
+
+# Copy files to Pi extensions directory
+mkdir -p ~/.pi/agent/extensions/pi-sync
+cp sync.sh pi-sync.ts ~/.pi/agent/extensions/pi-sync/
+
+# Create extension symlink
+ln -sf ~/.pi/agent/extensions/pi-sync/pi-sync.ts ~/.pi/agent/extensions/pi-sync.ts
+
+# Run export (generates password automatically)
+cd ~/.pi/agent/extensions/pi-sync
+./sync.sh export ~/pi-backup.age
+
+# Restart Pi to load extension
+```
+
 ### Quick Install (with auto-extension setup)
 
 ```bash
