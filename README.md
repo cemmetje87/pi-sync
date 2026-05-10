@@ -13,31 +13,6 @@ Securely sync all Pi configuration between machines.
 - Excludes sensitive files (`.env`, `*_local*`)  
 - Encryption: age (best) or openssl AES-256-CBC
 
-```json
-{
-  "name": "pi-sync-extension",
-  "version": "1.0.0",
-  "description": "Secure sync for Pi configuration (settings, extensions, skills)",
-  "main": "pi-sync.ts",
-  "bin": {
-    "pi-sync": "./sync.sh"
-  },
-  "files": [
-    "pi-sync.ts",
-    "sync.sh",
-    "SKILL.md"
-  ],
-  "keywords": ["pi", "extension", "sync", "backup", "configuration"],
-  "author": "",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://git.ozugur.nl/foadmin/pi-sync.git"
-  },
-  "homepage": "https://git.ozugur.nl/foadmin/pi-sync"
-}
-```
-
 ## 📦 Installation
 
 ### NPM (Once Published) 🚀
@@ -65,6 +40,33 @@ npm publish
 ```
 
 > Requires npm account with @ozugur scope or unique package name.
+
+### package.json
+
+```json
+{
+  "name": "pi-sync-extension",
+  "version": "1.0.0",
+  "description": "Secure sync for Pi configuration (settings, extensions, skills)",
+  "main": "pi-sync.ts",
+  "bin": {
+    "pi-sync": "./sync.sh"
+  },
+  "files": [
+    "pi-sync.ts",
+    "sync.sh",
+    "SKILL.md"
+  ],
+  "keywords": ["pi", "extension", "sync", "backup", "configuration"],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://git.ozugur.nl/foadmin/pi-sync.git"
+  },
+  "homepage": "https://git.ozugur.nl/foadmin/pi-sync"
+}
+```
 
 ### From Git (Recommended for now) 
 
