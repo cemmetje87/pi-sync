@@ -25,6 +25,8 @@ curl -fsSL https://git.ozugur.nl/foadmin/pi-sync/raw/branch/main/install.sh | ba
 curl -fsSL https://git.ozugur.nl/foadmin/pi-sync/raw/branch/main/install.sh | bash
 ```
 
+> **Note:** First export auto-generates a random encryption password (shown in output). Save this for importing on other machines.
+
 ### NPM (Once Published)
 
 ```bash
