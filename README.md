@@ -3,21 +3,53 @@ name: pi-sync
 description: Secure sync for Pi settings, extensions, skills, and tools
 ---
 
-# Pi Sync Extension
+# Pi Sync Extension 🔧
 
 Securely sync all Pi configuration between machines.
 
-## Features
+## Features ✨
 
 - Exports: skills, extensions, settings
-- Excludes sensitive files (`.env`, `*_local*`)
+- Excludes sensitive files (`.env`, `*_local*`)  
 - Encryption: age (best) or openssl AES-256-CBC
 
-## Setup
+## 📦 Installation
 
-On first run, creates `~/pi-sync/.env` with encryption password:
-- To install age: `PI_SYNC_INSTALL_AGE=1 ./sync.sh export ...`
-- To set custom password: `PI_SYNC_PASS=yourpass ./sync.sh export ...`
+### Quick Install (with auto-extension setup)
+
+```bash
+# Clone or download the pi-sync extension
+cd ~/.pi/agent/extensions/pi-sync
+
+# Run export with auto-install - creates extension symlink automatically
+PI_SYNC_AUTO_INSTALL_EXT=1 ./sync.sh export ~/pi-backup.age
+```
+
+### Manual Install Steps
+
+1. **📁 Download the extension**
+   ```bash
+   # Create directory
+   mkdir -p ~/.pi/agent/extensions/pi-sync
+   
+   # Copy files (from repo or extract)
+   # sync.sh → ~/.pi/agent/extensions/pi-sync/sync.sh
+   # pi-sync.ts → ~/.pi/agent/extensions/pi-sync/pi-sync.ts
+   ```
+
+2. **🔗 Create extension symlink**
+   ```bash
+   ln -sf ~/.pi/agent/extensions/pi-sync/pi-sync.ts ~/.pi/agent/extensions/pi-sync.ts
+   ```
+
+3. **🔐 First run generates password**
+   ```bash
+   cd ~/.pi/agent/extensions/pi-sync
+   ./sync.sh export ~/my-pi-config.age
+   # Creates ~/pi-sync/.env with encryption password
+   ```
+
+4. **🔄 Restart Pi** to load the extension
 
 ## Usage
 
