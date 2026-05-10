@@ -47,7 +47,8 @@ init_sync() {
             # Generate random password
             PASSWORD=$(openssl rand -hex 16 2>/dev/null || head -c 16 /dev/urandom | xxd -p)
             echo "PI_SYNC_PASS=$PASSWORD" > "$ENV_FILE"
-            echo "Generated password. Edit $ENV_FILE to change it."
+            echo "Generated encryption password: $PASSWORD"
+            echo "Saved to: $ENV_FILE"
         fi
     else
         echo "Using existing $ENV_FILE"
