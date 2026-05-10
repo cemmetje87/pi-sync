@@ -1,0 +1,17 @@
+{
+  "name": "pi-sync-extension",
+  "version": "1.0.0",
+  "description": "Secure sync for Pi configuration (settings, extensions, skills)",
+  "main": "pi-sync.ts",
+  "bin": {
+    "pi-sync": "./sync.sh"
+  },
+  "files": [
+    "pi-sync.ts",
+    "sync.sh",
+    "SKILL.md"
+  ],
+  "keywords": ["pi", "extension", "sync", "backup"],
+  "author": "",
+  "license": "MIT"
+}
