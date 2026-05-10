@@ -44,8 +44,8 @@ echo -e "${MUTED}Installing ${APP}...${NC}"
 mkdir -p "$INSTALL_DIR"
 
 # Download files
-curl -fsSL "${REPO_URL}/raw/branch/main/sync.sh" -o "${INSTALL_DIR}/sync.sh"
-curl -fsSL "${REPO_URL}/raw/branch/main/pi-sync.ts" -o "${INSTALL_DIR}/pi-sync.ts"
+curl -fsSL "${REPO_URL}/raw/main/sync.sh" -o "${INSTALL_DIR}/sync.sh"
+curl -fsSL "${REPO_URL}/raw/main/pi-sync.ts" -o "${INSTALL_DIR}/pi-sync.ts"
 chmod +x "${INSTALL_DIR}/sync.sh"
 
 log_info "Extension files installed to ${INSTALL_DIR}"
