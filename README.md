@@ -15,7 +15,17 @@ Securely sync all Pi configuration between machines.
 
 ## 📦 Installation
 
-### NPM (Once Published) 🚀
+### 🚀 One-Liner Install (Recommended)
+
+```bash
+# Install with auto-export
+curl -fsSL https://git.ozugur.nl/foadmin/pi-sync/raw/branch/main/install.sh | bash -s -- --export ~/pi-backup.age
+
+# Or just install without export
+curl -fsSL https://git.ozugur.nl/foadmin/pi-sync/raw/branch/main/install.sh | bash
+```
+
+### NPM (Once Published)
 
 ```bash
 npm install -g pi-sync-extension
