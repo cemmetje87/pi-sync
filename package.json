@@ -11,12 +11,16 @@
     "sync.sh",
     "SKILL.md"
   ],
-  "keywords": ["pi", "extension", "sync", "backup", "configuration"],
+  "keywords": ["pi", "extension", "sync", "backup", "configuration", "pi-package"],
   "author": "",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/cemmetje87/pi-sync.git"
   },
-  "homepage": "https://github.com/cemmetje87/pi-sync"
+  "homepage": "https://github.com/cemmetje87/pi-sync",
+  "pi": {
+    "extensions": ["pi-sync.ts"],
+    "skills": ["SKILL.md"]
+  }
 }
