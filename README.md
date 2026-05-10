@@ -174,3 +174,11 @@ PI_SYNC_AUTO_INSTALL_EXT=1 ./sync.sh export ~/backup.pi-age
 - Password stored in `~/pi-sync/.env` (NOT synced)
 - Existing `.env` files in skills are excluded
 - Share encrypted archive safely between machines
+
+---
+
+## License
+
+MIT License - See [LICENSE](LICENSE) file for details.
+
+Open source, free to use, modify, and distribute.
