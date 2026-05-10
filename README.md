@@ -5,6 +5,8 @@ description: Secure sync for Pi settings, extensions, skills, and tools
 
 # Pi Sync Extension 🔧
 
+**Open Source** • MIT License
+
 Securely sync all Pi configuration between machines.
 
 ## Features ✨
