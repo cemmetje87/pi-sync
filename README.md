@@ -37,24 +37,6 @@ npm install -g pi-sync-extension
 npx pi-sync-extension export ~/pi-backup.age
 ```
 
-#### To Publish to NPM:
-
-```bash
-# Login to npm (if not already)
-npm login
-
-# From the extension directory
-cd ~/.pi/agent/extensions/pi-sync
-
-# Update version in package.json if needed
-npm version patch  # or minor/major
-
-# Publish
-npm publish
-```
-
-> Requires npm account with unique package name.
-
 ### package.json
 
 ```json
