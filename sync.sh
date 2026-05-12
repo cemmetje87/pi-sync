@@ -14,8 +14,23 @@ ENV_FILE="$SYNC_DIR/.env"
 # Check if pi is installed
 has_pi() { [[ -d "$PI_DIR" ]]; }
 
-# Install extension for Pi
+# Check if pi-sync already installed via pi packages (npm)
+is_pi_package_installed() {
+    local settings="$PI_DIR/agent/settings.json"
+    if [[ -f "$settings" ]]; then
+        grep -q '"pi-sync-extension"' "$settings" 2>/dev/null
+    else
+        return 1
+    fi
+}
+
+# Install extension for Pi (legacy: only when not already a pi package)
 install_extension() {
+    if is_pi_package_installed; then
+        echo "pi-sync already installed as pi package (npm). Skipping legacy symlink."
+        return 0
+    fi
+
     echo "Installing pi-sync extension for Pi..."
     
     local ext_link="$PI_DIR/agent/extensions/pi-sync.ts"
@@ -105,6 +120,7 @@ export_all() {
         --exclude='*.env' \
         --exclude='*_local*' \
         --exclude='*.age' \
+        --exclude='pi-sync*' \
         . 2>/dev/null || true
     
     encrypt_file "$temp/pi-backup.tar.gz" "$target"

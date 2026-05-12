@@ -8,12 +8,17 @@ import type { ExtensionAPI } from "@mariozechner/pi-coding-agent";
 import { Type } from "typebox";
 import { exec } from "child_process";
 import { promisify } from "util";
+import { fileURLToPath } from "node:url";
+import { dirname, join } from "node:path";
 
 const execAsync = promisify(exec);
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
 export default function piSyncExtension(pi: ExtensionAPI) {
 	function getScriptPath(): string {
-		return `${process.env.HOME}/.pi/agent/extensions/pi-sync/sync.sh`;
+		return join(__dirname, "sync.sh");
 	}
 
 	async function runSync(args: string[]): Promise<string> {
