@@ -18,7 +18,7 @@ has_pi() { [[ -d "$PI_DIR" ]]; }
 is_pi_package_installed() {
     local settings="$PI_DIR/agent/settings.json"
     if [[ -f "$settings" ]]; then
-        grep -q '"pi-sync-extension"' "$settings" 2>/dev/null
+        grep -q "pi-sync-extension" "$settings" 2>/dev/null
     else
         return 1
     fi

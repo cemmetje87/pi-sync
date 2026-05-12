@@ -37,7 +37,7 @@ EOF
 is_pi_package_installed() {
     local settings="$HOME/.pi/agent/settings.json"
     if [[ -f "$settings" ]]; then
-        grep -q "\"${PKG_NAME}\"" "$settings" 2>/dev/null
+        grep -q "${PKG_NAME}" "$settings" 2>/dev/null
     else
         return 1
     fi
